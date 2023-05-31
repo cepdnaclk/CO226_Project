@@ -1,0 +1,117 @@
+<!--This is the login page-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login - LearnEdge</title>
+</head>
+<body>
+  <div class="imgcontainer">
+    <!--contain the logo-->
+    <img src="images/logo.png" width="80px", height="80px" id="logo">
+  </div>
+
+  <div class="container">
+    <!--contain the login items: username, password-->
+    <h1><b><u>Learn<span id="letter">E</span>dge</u></b></h1>
+    <h2>Login</h2>
+    <form>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username"/>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password"/>
+
+      <input type="submit" value="Login" id="login" class="btn"/>
+      <button id="registerStu" class="btn" onclick="window.open('./registerStu.html', '_blank');">Register As a Student</button>
+      <button id="registerIns" class="btn" onclick="window.open('./registerIns.html', '_blank');">Register As a Educational Institute</button>
+    </form>
+  </div>
+</body>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url("images/bg.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  #letter{
+    color: red;
+  }
+
+  .container {
+    width: 320px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #f4f4f4;
+    position: relative;
+    top: 140px; 
+    user-select: none;
+    box-shadow: 10px 10px 5px #aaaaaa;
+  }
+
+  h2 {
+    text-align: center;
+  }
+  
+  h1 {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: 95%;
+    padding: 7px;
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    border: none;
+    outline: none;
+  }
+
+  .btn{
+    width: 100%;
+    padding: 8px;
+    cursor: pointer;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 15px;
+    border-radius: 20px;
+    border: none;  
+  }
+
+  #login {
+    background-color: #4CAF50;
+  }
+
+  #registerStu, #registerIns{
+    background-color: rgb(94, 136, 221);
+    margin-top: 7px;
+  }
+  #login:hover{
+    background-color: #c15421;
+  }
+  #registerIns:hover{
+    background-color: #c15421;
+  }
+  #registerStu:hover{
+    background-color: #c15421;
+  }
+
+  #logo{
+    position: absolute;
+    top: 100px; 
+    left: 47.2%;
+    margin: 0 auto;
+    z-index: 1;
+  }
+</style>
+</html>
