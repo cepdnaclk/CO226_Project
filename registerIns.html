@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Institute Registration</title>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Create an Account</h2>
+    <form>
+        <div class="wrapper">
+            <div class="imgWrapper"> <img class="logo" src="./images/regImages/envelope.svg"> </div>
+            <input type="text" placeholder="Enter Your Email" required>
+        </div>
+        <div class="wrapper">
+            <div class="imgWrapper"> <img class="logo" src="./images/regImages/password.svg"> </div>
+            <input type="password" placeholder="Password" required>
+        </div>
+        <div class="wrapper">
+            <div class="imgWrapper"> <img class="logo" src="./images/regImages/user.svg"> </div>
+            <input type="text" placeholder="First Name" required>
+        </div>
+        <div class="wrapper">
+            <div class="imgWrapper"> <img class="logo" src="./images/regImages/user.svg"> </div>
+            <input type="text" placeholder="Last Name" required>
+        </div>
+        <div class="wrapper">
+            <div class="imgWrapper"> <img class="logo" src="./images/regImages/telephone.svg"> </div>           
+            <input type="number" placeholder="Telephone Number" required>
+        </div>
+      <button type="submit">Register As a Educational Institute</button>
+    </form>
+  </div>
+
+</body>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f2f2f2;
+    }
+    .container input{
+      width: 100%;
+      padding: 5px 10px;
+      font-size: 20px;
+      margin-left:10px;
+      display: inline-block;
+      box-sizing: border-box;
+      border-radius: 4px;
+      outline: none;
+      border: none;
+    }
+    .container button {
+      background-color: #5abc5e;
+      color: white;
+      padding: 10px 10px;
+      margin: 5px;
+      font-size: 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      border-radius: 4px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .container button:hover {
+      background-color: #429046;
+    }
+    .logo { 
+        width: 50px;
+        height: 50px;
+    }
+    .wrapper {
+        display: flex;
+        align-items: center;
+        padding: 0px 5px;
+        margin: 5px 0px;
+    }
+  </style>
+</html>
