@@ -1,32 +1,36 @@
+
+
 <?php
 // Retrieve form data
-$name = $_POST['username'];
+$email = $_POST['email'];
 $password = $_POST['password'];
+$firstName = $_POST['firstName'];
+$lastName = $_POST['lastName'];
+$telNo = $_POST['telNo'];
 
-// Database connection details
-$servername = "your_servername";
-$username = "your_username";
-$password = "";
-$dbname = "your_dbname";
+// Create a new PDO instance (replace hostname, username, password, and dbname with your MySQL server details)
+$pdo = new PDO('mysql:host=localhost;dbname=learnedge', 'root', '');
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+// Prepare the SQL statement
+$sql = "INSERT INTO student (email, password, firstName, lastName, telNo) VALUES (:email, :password, :firstName, :lastName, :telNo)";
+$stmt = $pdo->prepare($sql);
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+// Bind the form data to the prepared statement parameters
+$stmt->bindParam(':email', $email);
+$stmt->bindParam(':password', $password);
+$stmt->bindParam(':firstName', $firstName);
+$stmt->bindParam(':lastName', $lastName);
+$stmt->bindParam(':telNo', $telNo);
 
-// Prepare SQL statement
-$sql = "INSERT INTO your_table (name, email) VALUES ('$name', '$email')";
-
-// Execute SQL statement
-if ($conn->query($sql) === TRUE) {
-    echo "Data inserted successfully!";
+// Execute the prepared statement
+if ($stmt->execute()) {
+    echo "Registration successful! Redirecting to the main page...";
+    header("Refresh: 3; URL=index.html");
+    exit();
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    // Error occurred
+    echo "Error: " . $stmt->errorInfo()[2];
 }
 
-// Close connection
-$conn->close();
 ?>
+
