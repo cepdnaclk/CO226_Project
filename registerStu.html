@@ -7,26 +7,26 @@
 
   <div class="container">
     <h2>Create an Account</h2>
-    <form>
+    <form action="addStudentData.php" method="post">
         <div class="wrapper">
             <div class="imgWrapper"> <img class="logo" src="./images/regImages/envelope.svg"> </div>
-            <input type="text" placeholder="Enter Your Email" required>
+            <input type="text" placeholder="Enter Your Email" name="email" required>
         </div>
         <div class="wrapper">
             <div class="imgWrapper"> <img class="logo" src="./images/regImages/password.svg"> </div>
-            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Password" name="password"required>
         </div>
         <div class="wrapper">
             <div class="imgWrapper"> <img class="logo" src="./images/regImages/user.svg"> </div>
-            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="First Name" name="firstName"required>
         </div>
         <div class="wrapper">
             <div class="imgWrapper"> <img class="logo" src="./images/regImages/user.svg"> </div>
-            <input type="text" placeholder="Last Name" required>
+            <input type="text" placeholder="Last Name" name="lastName" required>
         </div>
         <div class="wrapper">
             <div class="imgWrapper"> <img class="logo" src="./images/regImages/telephone.svg"> </div>           
-            <input type="number" placeholder="Telephone Number" required>
+            <input type="number" placeholder="Telephone Number" name="telNo"required>
         </div>
       <button type="submit">Register As a Student</button>
     </form>
