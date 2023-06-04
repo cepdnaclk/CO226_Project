@@ -30,7 +30,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: index.html");
             exit();
         } else {
-            $error_message = "Invalid username or password.";
+            echo "Invalid username or password. Please try again";
+            header("Refresh: 2; URL=login.html");
+            exit();
         }
     }
 }
@@ -38,27 +40,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // Close database connection
 $conn->close();
 ?>
-
-<!-- HTML code for the login page -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Login - LearnEdge</title>
-</head>
-<body>
-<!-- Your existing HTML code -->
-
-<div class="container">
-    <!-- Your existing HTML code -->
-    <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-        <!-- Your existing HTML code -->
-    </form>
-
-    <?php if (isset($error_message)): ?>
-        <p><?php echo $error_message; ?></p>
-    <?php endif; ?>
-</div>
-
-<!-- Your existing HTML code -->
-</body>
-</html>
