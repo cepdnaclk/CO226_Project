@@ -24,8 +24,9 @@ $stmt->bindParam(':telNo', $telNo);
 
 // Execute the prepared statement
 if ($stmt->execute()) {
-    echo "Registration successful! Redirecting to the main page...";
-    header("Refresh: 3; URL=index.html");
+    echo "Registration successful! Redirecting to the login page...";
+    echo "Please login";
+    header("Refresh: 2; URL=login.html");
     exit();
 } else {
     // Error occurred
