@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Hello</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<!--Top Navigation Bar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <img src="./images/logo.png" alt="Logo" class="img-fluid" style="width: 40px; height:40px">
+        <h2 class="topic">Learn<span class="letterE">E</span>dge</h2>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <button class="nav-link" id="db" onclick="showDashBoard(this)">Dashboard</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" id="abt" onclick="showAbout(this)">About</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" id="ser" onclick="showServices(this)">Services</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" id="cont" onclick="showContact(this)">Contact</button>
+                </li>
+            </ul>
+            <form class="search-form">
+                <input type="text" class="form-control" placeholder="What do you want to learn?">
+            </form>
+        </div>
+        <li class = "navbar-nav dropdown collapse show ml-2" >
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                </svg>
+                My Profile
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Timetable</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="./index.html">Logout</a></li>
+            </ul>
+        </li>
+    </div>
+</nav>
+
+<!--Dashboard-->
+<div id="dashboard">
+    <header class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1>Welcome Lakshitha!</h1>
+        </div>
+    </header>
+</div>
+
+<!--About-->
+<div class="container" id="about" style="display: none">
+    <section class="about-section">
+            <h2 class="about-heading">About Us</h2>
+            <p class="about-content">
+                Welcome to our online course offering platform, a dynamic virtual space where learning knows no boundaries. We are passionate about empowering individuals from all walks of life to pursue their dreams, expand their horizons, and acquire valuable skills. Just like the world-renowned platform Coursera, we strive to create an inclusive learning environment that connects learners with the best universities and industry experts from around the globe.
+
+                Our mission is to democratize education by providing accessible, high-quality courses that cater to a diverse range of interests and aspirations. With a vast and ever-expanding catalog of courses spanning various disciplines, we aim to meet the needs of lifelong learners, professionals seeking career advancement, and those simply driven by a thirst for knowledge.
+
+                We pride ourselves on partnering with prestigious educational institutions and esteemed instructors who are at the forefront of their respective fields. This ensures that our learners receive unparalleled expertise and insights, enabling them to gain practical skills and stay relevant in an ever-evolving world.
+
+                Flexibility is at the core of our platform. Whether you're a busy professional, a student, or someone with a hectic schedule, our courses are designed to accommodate your lifestyle. With the convenience of online learning, you can access course materials at any time, from anywhere, and learn at your own pace.
+
+                We believe in the power of community and fostering connections. Our platform offers opportunities to engage with fellow learners, instructors, and industry professionals through discussion forums, virtual meetups, and networking events. Collaboration and interaction enrich the learning experience, allowing for the exchange of ideas and the cultivation of valuable connections that extend beyond the virtual classroom.
+
+                Join us on this educational journey, where knowledge knows no boundaries and the possibilities for personal and professional growth are limitless. Together, let's embrace the transformative power of learning and shape a brighter future, one course at a time.</p>
+    </section>
+</div>
+
+<!--Services-->
+<div class="container" id="services" style="display: none">
+    <h1 style="padding-bottom: 20px">Our Services</h1>
+    <div class="service">
+        <h2>Course Hosting and Delivery</h2>
+        <p>Learn Edge host the course content and provide a learning management system (LMS) to deliver the courses to learners. They handle the technical aspects of hosting videos, documents, quizzes, and other learning materials.</p>
+    </div>
+    <div class="service">
+        <h2>Certification</h2>
+        <p>We offer valid certificate for everyone who successfully complete their courses(requirements are different for each course).This feature helps learners showcase their achievements and enhance their professional profiles.</p>
+    </div>
+    <div class="service">
+        <h2>Analytics and Reporting</h2>
+        <p>Learn Edge platform provides detailed analytics and reporting capabilities to both course creators and learners. Creators can monitor enrollment, engagement, and revenue, while learners can track their progress and performance.</p>
+    </div>
+    <div class="service">
+        <h2>Financial Aids</h2>
+        <p> Coursera offers a Financial Aid Program to help individuals who demonstrate financial need access their extensive catalog of online courses. This program is designed to make high-quality education available to learners worldwide, irrespective of their financial circumstance.</p>
+        <p></p>
+    </div>
+</div>
+
+<!--Contact-->
+<div class="container" id="contact" style="display: none">
+    <h1>Contact Us</h1>
+    <form>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea class="form-control" id="message" rows="5" placeholder="Enter your message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin-top: 20px">Submit</button>
+    </form>
+</div>
+
+<footer class="footer bg-dark text-white text-center py-3" style="position: fixed;left: 0;bottom: 0; width: 100%;" >
+    <div class="container">
+        <span>&copy; 2023 LearnEdge. All rights reserved.</span>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script>
+    var dashboard = document.getElementById("dashboard")
+    var about = document.getElementById("about")
+    var services = document.getElementById("services")
+    var contact = document.getElementById("contact")
+    function showDashBoard(){
+        dashboard.style.display = "block"
+        about.style.display = "none"
+        services.style.display = "none"
+        contact.style.display = "none"
+    }
+        function showAbout(){
+        dashboard.style.display = "none"
+        about.style.display = "block"
+        services.style.display = "none"
+        contact.style.display = "none"
+    }
+    function showServices(){
+        dashboard.style.display = "none"
+        about.style.display = "none"
+        services.style.display = "block"
+        contact.style.display = "none"
+    }
+    function showContact(){
+        dashboard.style.display = "none"
+        about.style.display = "none"
+        services.style.display = "none"
+        contact.style.display = "block"
+    }
+
+</script>
+</body>
+<style>
+    body {
+        height: 100%;
+        margin: 0;
+    }
+    .about-section {
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .about-heading {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .about-content {
+        font-size: 18px;
+    }
+
+    .navbar-toggler {
+        border: 2px solid white;
+        margin-right:auto;
+        order: -1;
+    }
+
+    .navbar-nav {
+        margin-right: 0;
+        margin-left:0;
+    }
+
+    .navbar {
+        padding: 10px 0;
+        margin: 0px;
+        width: 100%;
+    }
+
+    .navbar-nav .nav-link {
+        color: #aaa;
+        font-size: 1.2rem;
+        padding: 0 20px;
+        user-select: none;
+    }
+
+    .navbar-nav{
+        padding:0px 7px;
+        margin-left: auto;
+        border-radius: 8px;
+    }
+
+    .search-form {
+        width: 300px;
+    }
+    .image-box img {
+        max-width: 100%;
+        margin-bottom: 10px;
+        height: available;
+        width: -moz-available;
+    }
+    .letterE{
+        color: red;
+    }
+    .topic{
+        color: white;
+        padding: 0px 10px;
+        user-select: none;
+    }
+</style>
+</html>
