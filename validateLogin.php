@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($result->num_rows > 0) {
             // Login successful
             // Redirect the user to the desired page or perform any other actions
-            header("Location: index.html");
+            header("Location: Student.html");
             exit();
         } else {
             echo "Invalid username or password. Please try again";
