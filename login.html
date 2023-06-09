@@ -1,106 +1,96 @@
-<!--This is the login page-->
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login - LearnEdge</title>
-  <link rel="icon" type="image/x-icon" href="./images/logo.png">
+  <title>Student Registration</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
 <body>
-  <div class="imgcontainer">
-    <!--contain the logo-->
-    <img src="images/logo.png" width="80px", height="80px" id="logo">
-  </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="./index.html">
+    <h2 class="topic">Learn<span class="letterE">E</span>dge</h2>
+  </a>
+</nav>
 
-  <div class="container">
-    <!--contain the login items: username, password-->
-    <h1><b><u>Learn<span id="letter">E</span>dge</u></b></h1>
-    <h2>Login</h2>
-    <form action="validateLogin.php" method="post">
-      <label>Email:</label>
-      <input type="email" id="username" name="email" required/>
+<div class="container">
+  <h1 class="text-center"><b><u>Learn<span id="letter">E</span>dge</u></b></h1>
+  <h2 class="text-center">Create an Account</h2>
+  <form action="addStudentData.php" method="post">
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+</svg>
+          </span>
+        </div>
+        <input type="text" class="form-control" placeholder="Enter Your Email" name="email" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><img class="logo" src="./images/regImages/password.svg"></span>
+        </div>
+        <input type="password" class="form-control" placeholder="Password" name="password" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><img class="logo" src="./images/regImages/user.svg"></span>
+        </div>
+        <input type="text" class="form-control" placeholder="First Name" name="firstName" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><img class="logo" src="./images/regImages/user.svg"></span>
+        </div>
+        <input type="text" class="form-control" placeholder="Last Name" name="lastName" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><img class="logo" src="./images/regImages/telephone.svg"></span>
+        </div>
+        <input type="number" class="form-control" placeholder="Telephone Number" name="telNo" required>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Register As a Student</button>
+  </form>
+</div>
+</div>
 
-      <label>Password:</label>
-      <input type="password" id="password" name="password" required/>
 
-      <input type="submit" value="Login" id="login" class="btn"/>
-      <a href="index.html">Back to Home Page</a>
-    </form>
-  </div>
+<p></p>
+<footer class="bg-dark text-white text-center py-4" style="position: absolute ; bottom: 0px; width: 100%">
+  <p>&copy; 2023 LearnEdge. All rights reserved.</p>
+</footer>
+
 </body>
 <style>
-  body {
-    font-family: Arial, sans-serif;
-    background-image: url("images/bg.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
-
-  #letter{
-    color: red;
-  }
-
   .container {
-    width: 320px;
+    width: 500px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
-    border-radius: 20px;
-    background-color: #f4f4f4;
-    position: relative;
-    top: 140px; 
-    user-select: none;
-    box-shadow: 10px 10px 5px #aaaaaa;
+    border-radius: 5px;
+    background-color: #f2f2f2;
   }
-
-  h2 {
-    text-align: center;
+  .letterE{
+    color: red;
   }
-  
-  h1 {
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-
-  label {
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  input[type="email"],
-  input[type="password"] {
-    width: 95%;
-    padding: 7px;
-    font-size: 20px;
-    margin-bottom: 15px;
-    margin-right: 10px;
-    border: none;
-    outline: none;
-  }
-
-  .btn{
-    width: 100%;
-    padding: 8px;
-    cursor: pointer;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  .topic{
     color: white;
-    font-size: 15px;
-    border-radius: 20px;
-    border: none;  
+    padding: 0px 10px;
+    user-select: none;
   }
-
-  #login {
-    background-color: #4CAF50;
-  }
-  #login:hover{
-    background-color: #c15421;
-  }
-
-  #logo{
-    position: absolute;
-    top: 100px; 
-    left: 47.2%;
-    margin: 0 auto;
-    z-index: 1;
+  #letter{
+    color: red;
   }
 </style>
 </html>
+
